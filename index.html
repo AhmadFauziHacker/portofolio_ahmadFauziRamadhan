@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Tailwind CSS</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-9999">
+        <div class="loader w-12 h-12 border-4 border-slate-300 border-t-sky-500 rounded-full animate-spin"></div>
+    </div>
+    <!-- END PRELOADER -->
+    <!-- Header Start  -->
+    <header class="absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container" data-aos="fade-down">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4 flex items-center">
+                    <a href="#home" class="flex items-center gap-2">
+                        <img src="img/Teks_paragraf_Anda-removebg-preview.png" alt="Logo"
+                            class="h-10 w-auto transition duration-300 dark:invert" />
+                    </a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white dark:bg-slate-900 dark:bg-transparent shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex lg:items-center">
+                            <li class=" group">
+                                <a href="#home"
+                                    class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-sky-400">Beranda</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-sky-400">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#gallery"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-sky-400">Gallery</a>
+                            </li>
+                            <li class="group">
+                                <a href="#clients"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-sky-400">Clients</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-sky-400">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-sky-400">Contacs</a>
+                            </li>
+                            <!-- 🔥 Dark Mode Toggle as Navbar Item -->
+                            <li class="group lg:ml-4 mt-3 lg:mt-0 mx-8 lg:mx-0">
+                                <button id="dark-toggle"
+                                    class="relative w-10 h-9 rounded-full flex justify-center bg-slate-200 dark:bg-slate-700 transition">
+                                    <span id="icon-sun-moon"
+                                        class="block w-7 h-6 transition-transform duration-500 ease-in-out">
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center gap-8 lg:gap-0">
+                <!-- Left Section Start -->
+                <div class="w-full px-4 lg:w-1/2" data-aos="fade-right">
+                    <h1 class="text-base font-semibold text-sky-400 md:text-xl">
+                        Halo Semua 👋, saya
+                        <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">
+                            Ahmad Fauzi Ramadhan
+                        </span>
+                    </h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 mt-3 lg:text-2xl">
+                        <span id="typingText" class="text-dark"></span>
+                        <span class="border-r-2 border-dark animate-pulse ml-1"></span>
+                    </h2>
+                    <p class="font-medium text-slate-400 mb-7 leading-relaxed">
+                        Jangan gunakan jasa saya, karna saya juga pakai
+                        <span class="text-dark font-bold">AI</span>
+                    </p>
+                    <button
+                        class="text-base font-semibold text-white bg-sky-500 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi
+                        Saya
+                    </button>
+                </div>
+                <!-- Left Section End -->
+                <!-- Right Section Start -->
+                <div class="w-full px-4 lg:w-1/2 flex justify-center lg:justify-end" data-aos="zoom-in">
+                    <div class="relative mt-10 lg:mt-0">
+                        <img src="img/1-removebg-preview.png" alt="Bagus Ali Akbar"
+                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto" />
+                        <!-- Dekorasi Blob -->
+                        <span class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 md:scale-125">
+                            <svg width="500" height="" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#61bafa"
+                                    d="M70.9,-16.8C79.5,3.4,65.5,37.1,40.2,55.6C14.8,74.1,-21.9,77.4,-40.9,62.2C-60,46.9,-61.4,13.3,-51.6,-8.6C-41.9,-30.4,-20.9,-40.4,5.1,-42C31.2,-43.7,62.4,-37,70.9,-16.8Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <!-- Right Section End -->
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-start lg:items-center">
+                <!-- Left Content -->
+                <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-right">
+                    <h4 class="font-bold uppercase text-sky-400 text-lg mb-3">Tentang Saya</h4>
+                    <h2 class="font-bold text-dark text-3xl lg:text-4xl mb-5 max-w-md">
+                        Yuk, Belajar web desain dengan Tailwind CSS!
+                    </h2>
+                    <p class="font-medium text-base lg:text-lg text-slate-500 max-w-xl leading-relaxed">Saya adalah web
+                        developer pemula yang memiliki minat besar pada web desain dan front-end development. Saya
+                        terbiasa menggunakan Tailwind CSS untuk membangun tampilan website yang responsif, modern, dan
+                        efisien.
+                    </p>
+                </div>
+                <!-- Right Content -->
+                <div class="w-full px-4 lg:w-1/2" data-aos="fade-left">
+                    <h3 class="font-bold text-dark text-3xl lg:text-4xl mb-4 lg:pt-6">
+                        Mari Berteman
+                    </h3>
+                    <p class="font-medium text-base lg:text-lg text-slate-500 mb-6 leading-relaxed">Tertarik dengan web
+                        development atau desain? Yuk, kita saling terhubung dan berbagi insight melalui media sosial di
+                        bawah ini.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex items-center flex-wrap gap-4">
+                        <a href="https://youtube.com" target="_blank" class="social-btn" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ahmd_faujii?igsh=MWd4b3ZoYzRkZmUwdg==" target="_blank"
+                            class="social-btn" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" class="social-btn" aria-label="X / Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="social-btn" aria-label="TikTok">
+                            <i data-lucide="music"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Gallery Section Start -->
+    <section id="gallery" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-900">
+        <div class="container" data-aos="fade-down">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-sky-400 mb-2">Gallery</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Koleksi Gallery</h2>
+                    <p class="font-medium text-md text-slate-500 md:text-lg">Galeri ini berisi dokumentasi momen bersama
+                        saya dan kawan-kawan, mulai dari kegiatan santai hingga kebersamaan di berbagai kesempatan.</p>
+                </div>
+            </div>
+            <div class="w-full px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:w-10/12 xl:mx-auto">
+                <!-- Item -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/1.jpeg" alt="Image 1"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <!-- Overlay -->
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 1</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/2.jpeg" alt="Image 2"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 2</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/3.jpeg" alt="Image 3"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 3</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/4.jpeg" alt="Image 4"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 4</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/5.jpeg" alt="Image 5"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 5</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/6.jpeg" alt="Image 6"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 6</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/7.jpeg" alt="Image 7"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 7</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/8.jpeg" alt="Image 8"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 8</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="img/9.jpeg" alt="Image 9"
+                        class="portfolio-img w-full h-60 object-cover cursor-pointer transition duration-500 group-hover:scale-110" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <h3 class="text-white text-xl font-semibold">Image 9</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+    <div id="lightbox" class="fixed inset-0 hidden z-9999 bg-black/80 items-center justify-center">
+        <!-- Close -->
+        <button id="lightboxClose" class="absolute top-6 right-6 text-white text-3xl font-bold">
+            &times;
+        </button>
+        <!-- Prev -->
+        <button id="lightboxPrev"
+            class="absolute left-5 md:left-10 text-white text-4xl font-bold hover:text-sky-400 transition">
+            &#10094;
+        </button>
+        <!-- Image -->
+        <img id="lightboxImage"
+            class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl transition-transform duration-300 scale-95" />
+        <!-- Next -->
+        <button id="lightboxNext"
+            class="absolute right-5 md:right-10 text-white text-4xl font-bold hover:text-sky-400 transition">
+            &#10095;
+        </button>
+    </div>
+    <!-- Clients Section Start -->
+    <section id="clients" class="pt-36 pb-32 bg-slate-600">
+        <div class="container" data-aos="fade-down">
+            <div class="w-full px-4">
+                <div class="mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-sky-400 mb-2">Clients</h4>
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Yang Pernah Bekerjasama</h2>
+                    <p class="font-medium text-md text-slate-500 md:text-lg">Bagian ini menampilkan perusahaan klien
+                        pernah mempercayakan kerja sama kepada saya dalam pengembangan website dan kebutuhan digital
+                        lainnya, yaaa walaupun pakai ai</p>
+                </div>
+            </div>
+            <div class="w-full px-4">
+                <div class="flex flex-wrap items-center justify-center">
+                    <a href="#"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="img/clients/google.svg" alt="Google" />
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="img/clients/microsoft.svg" alt="Microsoft" />
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="img/clients/netflix.svg" alt="Netflix" />
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="img/clients/youtube.svg" alt="Youtube" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Section End -->
+    <!-- Blog Section Start -->
+    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-900">
+        <div class="container" data-aos="fade-down">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-sky-400 mb-2">Blog</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>
+                    <p class="font-medium text-md text-slate-500 md:text-lg">Berisi tulisan dan catatan terbaru seputar
+                        web development, desain antarmuka, serta pengalaman belajar yang saya bagikan.!</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/3 xl:1/3">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-right">
+                        <img src="img/clients/1.jpg" alt="Blog 1" class="w-full" />
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Belajar
+                                    Tailwind CSS</a>
+                            </h3>
+                            <p class="font-medium text-base text-slate-500 mb-6">Catatan awal saya dalam mempelajari
+                                Tailwind CSS, mulai dari konsep utility-first hingga penerapannya dalam membangun
+                                tampilan website yang responsif.</p>
+                            <a href="#"
+                                class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/3 xl:1/3" data-aos="fade-down">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="img/clients/2.jpg" alt="Blog 2" class="w-full" />
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Mudah
+                                    menguasai Utility pada Tailwind CSS</a>
+                            </h3>
+                            <p class="font-medium text-base text-slate-500 mb-6">Pembahasan mengenai cara memahami dan
+                                menggunakan utility class Tailwind CSS secara efektif untuk mempercepat proses
+                                pengembangan antarmuka.</p>
+                            <a href="#"
+                                class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/3 xl:1/3" data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="img/clients/3.jpg" alt="Blog 3" class="w-full" />
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Cara
+                                    menjadi programmer mahir dalam 1 menit</a>
+                            </h3>
+                            <p class="font-medium text-base text-slate-500 mb-6">Pengalaman dan tips dasar yang saya
+                                pelajari dalam perjalanan menjadi web developer, mulai dari belajar HTML, CSS, hingga
+                                framework pendukung.</p>
+                            <a href="#"
+                                class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Contact Section Start -->
+    <section id="contact" class="pt-36 pb-32">
+        <div class="container" data-aos="fade-up">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-sky-400 mb-2">Contact</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
+                    <p class="font-medium text-md text-slate-500 md:text-lg">Silahkan beri kami saran atau kritik agar
+                        kita bisa menjadi lebih baik dan evaluasi kekurangan kita</p>
+                </div>
+            </div>
+            <form>
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base font-bold text-sky-400">Nama</label>
+                        <input type="text" id="name"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky-500 focus:ring-1 focus:border-sky-500" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base font-bold text-sky-400">Email</label>
+                        <input type="email" id="email"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky-500 focus:ring-1 focus:border-sky-500" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="message" class="text-base font-bold text-sky-400">Pesan</label>
+                        <textarea type="email" id="email"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky-500 focus:ring-1 focus:border-sky-500 h-32"></textarea>
+                    </div>
+                    <div class="w-full px-4">
+                        <button
+                            class="text-base font-semibold text-white bg-sky-400 py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+    <!-- Footer Start -->
+    <footer class="bg-black pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold text-3xl text-white mb-5">Fakultas Ilmu Komputer</h2>
+                    <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+                    <p>ahmaadfauziramadhan@unsub.ac.id</p>
+                    <p>Jl. R.A Kartini KM3</p>
+                    <p>Subang</p>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-sky-400 mb-3">Programming</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-sky-400 mb-3">Teknologi</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-sky-400 mb-3">Gaya Hidup</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-sky-400 mb-3">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="inline-block text-base hover:text-sky-400 mb-3">About</a>
+                        </li>
+                        <li>
+                            <a href="#gallery" class="inline-block text-base hover:text-sky-400 mb-3">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#clients" class="inline-block text-base hover:text-sky-400 mb-3">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="inline-block text-base hover:text-sky-400 mb-3">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="inline-block text-base hover:text-sky-400 mb-3">Contacs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-700">
+                <!-- Social Icons -->
+                <div class="flex items-center justify-center gap-4 mb-5">
+                    <a href="https://youtube.com/" target="_blank" class="social-btn" aria-label="YouTube">
+                        <i data-lucide="youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ahmd_faujii?igsh=MWd4b3ZoYzRkZmUwdg==/" target="_blank"
+                        class="social-btn" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://x.com/" target="_blank" class="social-btn" aria-label="X / Twitter">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="https://tiktok.com/" target="_blank" class="social-btn" aria-label="TikTok">
+                        <i data-lucide="music"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                </div>
+                <p class="font-medium text-sm text-slate-500 text-center">
+                    Dibuat dengan
+                    <button id="loveBtn" class="relative inline-flex items-center justify-center text-pink-500 mx-1"
+                        aria-label="Love">
+                        <span id="loveIcon" class="inline-block leading-none select-none">❤️</span>
+                    </button>
+                    oleh
+                    <a href="https://www.instagram.com/ahmd_faujii?igsh=MWd4b3ZoYzRkZmUwdg==/" target="_blank"
+                        class="font-bold text-sky-400">
+                        Ahmad Fauzi Ramadhan
+                    </a>,
+                    menggunakan
+                    <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-sky-500">
+                        Tailwind CSS v4.1
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-sky-500 text-white
+           shadow-lg flex items-center justify-center text-2xl
+           hover:bg-sky-600 transition-all duration-300 opacity-0">
+        ↑
+    </button>
+    <!-- Footer End -->
+    <script src="src/script.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
